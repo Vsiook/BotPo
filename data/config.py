@@ -7,7 +7,8 @@ load_dotenv()
 BOT_TOKEN = str(os.getenv("BOT_TOKEN"))
 
 admins = [
-    os.getenv("ADMIN_ID"),
+487067004,
+463297958
 ]
 
 ip = os.getenv("ip")

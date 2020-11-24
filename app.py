@@ -1,15 +1,7 @@
-async def on_startup(dp):
-    import filters
-    import middlewares
-    filters.setup(dp)
-    middlewares.setup(dp)
-
-    from utils.notify_admins import on_startup_notify
-    await on_startup_notify(dp)
-
+from aiogram.utils import executor
 
 if __name__ == '__main__':
-    from aiogram import executor
-    from handlers import dp
+    from keyboards import dp
+    # from handlers import dp
 
-    executor.start_polling(dp, on_startup=on_startup)
+    executor.start_polling(dp, skip_updates=True)
